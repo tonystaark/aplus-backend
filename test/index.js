@@ -9,7 +9,6 @@ const app = require('../app')
 describe('Creating entities', () => {
 
     it('should create USER table', (done) => {
-      console.log('ssss')
       done()
     })
 })
