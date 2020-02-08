@@ -3,6 +3,7 @@
 const mysql = require('mysql')
 const env = process.env.NODE_ENV || 'development'
 const config = require(`./${env}`)
+// const DB = require('./credentials.js')
 import { DB } from './credentials.js'
 const dbName = `${env}`
 const createDatabase =
@@ -62,7 +63,7 @@ CREATE TABLE IF NOT EXISTS thread(
   id INT AUTO_INCREMENT PRIMARY KEY, 
   title VARCHAR(150),
   body TEXT,
-  attachment TEXT,
+  attachment LONGBLOB,
   created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   like_count INT,
   user_id INT,
@@ -77,7 +78,7 @@ const createPostTable =
 CREATE TABLE IF NOT EXISTS post(
   id INT AUTO_INCREMENT PRIMARY KEY, 
   body TEXT,
-  attachment TEXT,
+  attachment LONGBLOB,
   created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   like_count INT,
   thread_id INT,
