@@ -3,7 +3,6 @@ import { getAllThreadsDB, getThreadsByIdDB } from '../database/getThreadDB'
 const getAllThreads = async(req, res) => {
   try {
     const result = await getAllThreadsDB(req)
-    console.log('rsult',result)
     res.status(200).send(result)
   }catch(err){
     const errorObject = {

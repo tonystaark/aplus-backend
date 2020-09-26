@@ -2,7 +2,7 @@
 // define the home page route
 const createPostDB = (requestBody) => {
   const { body, attachment, thread_id } = requestBody  
-  const statement = `INSERT INTO post(body, attachment, thread_id) VALUES (?)`;
+  const statement = `INSERT INTO post(body, attachment, thread_id) VALUES (?, LOAD_FILE(?), ?)`;
   db.query(statement, [[body, attachment, thread_id]], (err, result) => {
     if (err) {
       console.log('CREATE NEW POST ERROR',err)

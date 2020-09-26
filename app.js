@@ -5,6 +5,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
 const config = require('./config/index')
+const cors = require('cors');
 const app = express()
 
 // import thread from './routes/thread'
@@ -29,7 +30,8 @@ app.use(logger('dev'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')))
-
+app.use(cors());
+app.options('*', cors());
 // app.post('/object', postObject)
 // app.get('/object/:key', getObject)
 app.post('/thread', createThread)

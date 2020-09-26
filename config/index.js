@@ -117,42 +117,42 @@ db.connect(function (err) {
   console.log(`Created ${dbName} database !`)
   db.query(createDatabase, function (err, result) {
     if (err) throw err
-    console.log(`Created ${dbName} table !`)
+    // console.log(`Created ${dbName} table !`)
   })
 
   db.query(createCountryTable, function (err, result) {
     if (err) throw err
-    console.log(`Created ${dbName} table !`)
+    // console.log(`Created ${dbName} table !`)
   })
   
   db.query(createUserTable, function (err, result) {
     if (err) throw err
-    console.log(`Created ${dbName} table !`)
+    // console.log(`Created ${dbName} table !`)
   })
   
   db.query(createSystemTable, function (err, result) {
     if (err) throw err
-    console.log(`Created ${dbName} table !`)
+    // console.log(`Created ${dbName} table !`)
   })
   
   db.query(createSubjectTable, function (err, result) {
     if (err) throw err
-    console.log(`Created ${dbName} table !`)
+    // console.log(`Created ${dbName} table !`)
   })
   
   db.query(createThreadTable, function (err, result) {
     if (err) throw err
-    console.log(`Created ${dbName} table !`)
+    // console.log(`Created ${dbName} table !`)
   })
   
   db.query(createPostTable, function (err, result) {
     if (err) throw err
-    console.log(`Created ${dbName} table !`)
+    // console.log(`Created ${dbName} table !`)
   })
   
   db.query(createReplyTable, function (err, result) {
     if (err) throw err
-    console.log(`Created ${dbName} table !`)
+    // console.log(`Created ${dbName} table !`)
   })  
 })
 
